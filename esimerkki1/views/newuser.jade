@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  form#formAddUser(name="adduser",method="post",action="/adduser")
-        input#inputUserName(type="text", placeholder="username", name="username")
-        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-        button#btnSubmit(type="submit") submit
-  p <a href="/">Palaa etusivulle</a>
+    h1= title
+    form#formAddGame(name="addgame",method="post",action="/adduser")
+        input#inputPeliNimi(type="text", placeholder="nimi", name="nimi")
+        input#inputPeliAlusta(type="text", placeholder="Julkaisualusta", name="alusta")
+        input#inputPeliVuosi(type="text", placeholder="Julkaisuvuosi", name="vuosi")
+        input#inputPeliKehittaja(type="text", placeholder="Pelin Kehittäjä", name="kehittaja")
+        input#inputPeliJulkaisija(type="text", placeholder="Pelin Julkaisija", name="julkaisija")
+        input#inputPeliGenre(type="text", placeholder="Pelin Genre", name="genre")
+        button#btnSubmit(type="submit") Lähetä
+    p <a href="/">Palaa pääsivulle<a>
