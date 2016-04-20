@@ -1,10 +1,12 @@
 extends layout
 
 block content
-	h1.
-		User List
-	u1
-		each user, i in userlist
-			li
-				a(href="mailto:#{user.email}")= user.username
-  
+    h1.
+        Pelipankki
+    ul
+        if userlist.length > 0
+            each game, i in userlist
+                p #{game.nimi}, #{game.vuosi), #{game.alusta}, #{game.kehittaja}, #{game.julkaisija}, #{game.genre}</br>
+        else
+            p Tämä lista on tyhjä.
+    p <a href="/">Palaa pääsivulle<a>
